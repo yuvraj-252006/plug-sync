@@ -1,0 +1,48 @@
+/* ------------------------------------------------------------
+   Responsive Breakpoints
+   ------------------------------------------------------------ */
+
+/* Tablet (≤ 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 var(--space-sm);
+  }
+  .flex {
+    flex-direction: column;
+  }
+}
+
+/* Mobile (≤ 640px) */
+@media (max-width: 640px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+
+  .card {
+    padding: var(--space-md);
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* hidden by default */
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    box-shadow: var(--shadow-md);
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+  .sidebar.open { left: 0; }
+  .sidebar-toggle {
+    display: block;
+    position: fixed;
+    top: var(--space-md);
+    left: var(--space-md);
+    z-index: 1100;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: var(--radius-sm);
+    padding: var(--space-xs) var(--space-sm);
+  }
+}
